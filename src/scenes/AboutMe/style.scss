@@ -1,3 +1,23 @@
 .about-me-screen{
-	height: 600px;
+	height: auto;
+	padding: 20px;
+	.about-me-item{
+		.icon{
+			float: left;
+			height: 100px;
+			width: 100px;
+			background-size: cover;
+			background-position: center;
+		}
+		.content{
+			float: left;
+			margin-left: 15px;
+			.title{
+				font-size: 2.2rem;
+			}
+			.description{
+				font-size: 1.6rem;
+			}
+		}
+	}
 }

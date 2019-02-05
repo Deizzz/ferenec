@@ -30,7 +30,8 @@ export default class index extends React.Component {
 		const {items} = this.state;
 		return (
 			<div className="reviews-wrapper">
-				<Grid >
+				<h2 className="screen-title">Отзывы</h2>
+				<Grid>
 					<Row>
 						{items.map((item, idx) => {
 							if (idx < 2)

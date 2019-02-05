@@ -14,14 +14,14 @@ export default class Slider extends React.Component {
 		this.state = {
 			position: 0,
 			nextAnimationDirection: 'left',
-			timePickRange: 5000
+			interval: 5000
 		}
 	}
 
 	componentDidMount() {
 		timer = window.setInterval(()=> {
 			this.next();
-		}, this.state.timePickRange)
+		}, this.state.interval)
 	}
 
 	componentWillUnmount() {

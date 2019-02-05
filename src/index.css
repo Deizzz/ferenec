@@ -26,6 +26,14 @@ code {
   padding: 10px;
 }
 
+.col.s12{
+  width: 100%;
+}
+
 .col.s6{
   width: 50%;
+}
+
+.col.s3{
+  width: 33.33%;
 }
