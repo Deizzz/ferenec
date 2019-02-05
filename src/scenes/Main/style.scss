@@ -1,0 +1,48 @@
+
+.header-section{
+	width: 100%;
+	height: 720px;
+	background-image: url("./main-background.jpg");
+	background-size:cover;
+
+	.about-me{
+		position: absolute;
+		bottom: 120px;
+		left: 50px;
+		width: 400px;
+		text-align: left;
+		font-size: 30px;
+		color: white;
+		padding: 14px;
+		background: rgba(0,0,0, 0.4);
+		.focus{
+			border-bottom: 2px solid #F7B644;
+
+		}
+	}
+
+	.bottom-border{
+		position: absolute;
+		width: 100%;
+		height: 30px;
+		bottom: 0px;
+		left: 0px;
+		&::after{
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-repeat: repeat;
+			height: 20px;
+			background-size: 20px 30px;
+			background-image:
+			radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+			transition: 120ms ease-in-out;
+		}
+		&:hover::after{
+			height: 30px;
+			background-size: 20px 30px; 
+		}
+	}
+}

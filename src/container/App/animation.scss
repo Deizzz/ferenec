@@ -1,0 +1,10 @@
+.cards-list-anim-enter,
+.cards-list-anim-appear
+{
+	opacity: 0;
+	transition: 300ms ease-in-out;
+}
+.cards-list-anim-enter.cards-list-anim-enter-active,
+.cards-list-anim-appear.cards-list-anim-appear-active{
+	opacity: 1;
+}

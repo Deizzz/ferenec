@@ -1,0 +1,96 @@
+.navbar{
+	text-align: center;
+	transition: 100ms ease-in-out;
+	font-size: 20px;
+
+	@media screen and (max-width: 768px) {
+		ul{
+			li{
+				display: block;
+				width: 100%;
+			}
+		}
+		.hamburger{
+			background: rgba(0,0,0,0.4);
+		}
+	}
+
+	ul{
+		padding: 10px;
+		position: relative;
+		li{
+			text-align: center;
+			position: relative;
+			padding: 0 20px;
+			&.logo{
+				
+
+			}
+			display: inline-block;
+			a{
+				text-decoration: none;
+				color: white;
+				font-weight: 300;
+				&.logo{
+					font-size:28px; 
+					color: white;
+				}
+				&::after{
+					content: "";
+					display: block;
+				    width: 0;
+				    height: 2px;
+				    background: #F7B644;
+				    transition: width .3s;
+				    text-align: center;
+				    margin: 0 auto;
+
+				}
+				&:hover{
+					&::after{
+						width: 100%;
+					}
+					
+				}
+
+
+			}
+		}
+	}
+
+	&:hover{
+		background: rgba(0,0,0,0.4);
+	}
+
+
+	.hamburger{
+		text-align: left;
+		padding: 10px;
+		.menu-toggle{
+			border-radius: 3px;
+    		display: inline-block;
+    		cursor: pointer;
+			.bar{
+				display: block;
+			    width: 30px;
+			    margin-bottom: 4px;
+			    height: 5px;
+			    background-color: white;
+			    border-radius: 1px;
+			    transition: all 0.3s ease-in-out;
+			}
+
+			&.on .one {
+			  transform: rotate(45deg) translate(6px, 6px);
+			}
+
+			&.on .two {
+			  opacity: 0;
+			}
+
+			&.on .three {
+			  transform: rotate(-45deg) translate(6px, -6px);
+			}
+		}
+	}
+}

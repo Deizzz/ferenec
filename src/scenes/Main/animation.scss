@@ -1,0 +1,7 @@
+.main-animation-appear{
+	opacity: 0.01;
+	transition: 200ms ease-in-out;
+}
+.main-animation-appear.main-animation-appear-active{
+	opacity: 1;
+}

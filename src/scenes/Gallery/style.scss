@@ -1,0 +1,121 @@
+.gallery{
+	width: 100%;
+	padding: 0px;
+	background-color: white;
+	.slider-wrapper{
+		width: 100%;
+		height: 500px;
+		background: black;
+		position: relative;
+		.slider-items{
+			width: 100%;
+			height: 100%;
+			background: white;
+			position: relative;
+			overflow: hidden;
+			&.left{
+				.slider-item{
+					transform: translate(0px);
+				}
+			}
+			&.right{
+				.slider-item{
+					transform: translate(0px);
+				}
+			}
+			.slider-item{
+				transition: 260ms ease-in-out;
+				z-index: 10;
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				background-size: cover;
+				background-position: center;
+				transform: scale(1.1);
+				
+				&.active{
+					opacity: 1;
+					transform: scale(1);
+					transform: translate(0px);
+				}
+
+				.oprion-block{
+					padding: 20px;
+					position: absolute;
+					top: 100px;
+					left: 100px;
+					opacity: 0;
+					transition: 260ms ease-in-out;
+					transform: translate(-500px);
+					.title{
+						padding: 0 2px;
+						display: inline-block;
+						width: auto;
+						font-size: 4rem;
+						background-color: #F7B644;
+						color: white; 
+					}
+					.description{
+						font-size: 2rem;
+						color: white; 
+					}
+
+					&.active{
+						opacity: 1;
+						transform: translate(0);
+					}
+				}
+			}
+		}
+
+		.slider-controlls{
+			z-index: 120;
+			height: 100%;
+			width: 150px;
+			background: black;
+			position: absolute;
+			top: 0;
+			background-color: transparent;
+			cursor: pointer;
+			&.left{
+				left: 0;
+				transition: 160ms ease-in-out;
+				&:hover{
+					background: linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,0.0))
+				}
+				
+			}
+			&.right{
+				right: 0;
+				transition: 1600ms ease-in-out;
+				&:hover{
+					background: linear-gradient(90deg, rgba(0,0,0,0.0), rgba(0,0,0,0.4))
+				}
+			}
+		}
+
+		.position-view{
+			width: 100%;
+			padding: 10px;
+			text-align: center;
+			.position{
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				margin: 0px 4px;
+				border-radius: 50%;
+				border: 1px solid #F7B644;
+				transition: 160ms ease-in-out;
+				&.active{
+					background-color: #F7B644;
+					transform: scale(1.3);
+				}
+				&:hover{
+					transform: scale(1.3);
+				}
+			}
+		}
+	}
+}
