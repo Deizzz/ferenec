@@ -11,6 +11,7 @@ import MakeOrder from "../MakeOrder";
 import Footer from "../Footer";
 import Gallery from "../Gallery";
 import AboutMe from "../AboutMe";
+import Reviews from "../Reviews";
 
 //Components
 import Card from "../../components/Card";
@@ -30,6 +31,7 @@ export default class Main extends React.Component {
 				<Header />
 				<AboutMe />
 				<Gallery />
+				<Reviews />
 				<MakeOrder />
 				<Footer />
 			</div>
