@@ -59,7 +59,7 @@ module.exports = {
   ],
   devtool: "cheap-eval-source-map",
   output: {
-    path: __dirname + '/public',
+    path: __dirname + '/build',
     publicPath: '/',
     filename: 'bundle.js'
   },
