@@ -1,6 +1,6 @@
 import React from 'react';
 import Review from "./components/Review";
-import {Grid, Row} from "react-bootstrap";
+import {Grid, Row, Col} from "react-bootstrap";
 
 import "./style.scss";
 
@@ -35,9 +35,9 @@ export default class index extends React.Component {
 					<Row>
 						{items.map((item, idx) => {
 							if (idx < 2)
-								return <div className="col s6">
+								return <Col xs={12} md={6}>
 								<Review className={idx%2 === 0 ? "orange" : ""} key={idx} review={item}/>
-							</div>})}
+							</Col>})}
 					</Row>
 				</Grid>
 			</div>

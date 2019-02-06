@@ -13,6 +13,27 @@ export default class Navbar extends React.Component {
 		super(props);
 	}
 
+	scrollTo = (element, to, duration) => {
+		if (duration <= 0) 
+			return;
+	    let difference = to - document.scrollingElement.scrollTop;
+	    let perTick = difference / duration * 10;
+
+	    setTimeout(() => {
+	        document.scrollingElement.scrollTop = document.scrollingElement.scrollTop + perTick;
+	        if (element.scrollTop === to) return;
+	        this.scrollTo(element, to, duration - 10);
+	    }, 10);
+	};
+
+	runScroll = (id) => {
+		let el = document.getElementById(`${id}`);
+		let rect = el.getBoundingClientRect();
+		if (el) {
+			this.scrollTo(document.body, rect.y, 400);
+		}
+	};
+
 	render() {
 		const {collapse, hamburger} = this.props;
 		return (
@@ -42,7 +63,7 @@ export default class Navbar extends React.Component {
 						<a href="">Контакты</a>
 					</li>
 					<li>
-						<a href="#make-order">Сделать заказ</a>
+						<a onClick={()=> this.runScroll('make-order')}>Сделать заказ</a>
 					</li>
 				</ul>}
 			</div>

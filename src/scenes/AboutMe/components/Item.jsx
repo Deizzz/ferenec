@@ -1,4 +1,5 @@
 import React from 'react';
+import {Row, Col} from "react-bootstrap";
 
 export default class Item extends React.Component {
 	static propTypes = {
@@ -14,13 +15,20 @@ export default class Item extends React.Component {
 		const {item} = this.props;
 		return (
 			<div className="about-me-item">
-				<div className="icon" style={{
-					backgroundImage: `url(${item.icon})`
-				}}></div>
-				<div className="content">
-					<div className="title">{item.title}</div>
-					<div className="description">{item.description}</div>
-				</div>
+				<Row>
+					<Col xs={2}>
+						<div className="icon" style={{
+							backgroundImage: `url(${item.icon})`
+						}}></div>
+					</Col>
+					<Col xs={10}>
+						<div className="content">
+							<div className="title">{item.title}</div>
+							<div className="description">{item.description}</div>
+						</div>
+					</Col>
+				</Row>
+				
 			</div>
 		);
 	}

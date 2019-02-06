@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row } from "react-bootstrap";
+import {Grid, Row, Col } from "react-bootstrap";
 import Item from "./components/Item";
 
 import "./style.scss";
@@ -32,27 +32,9 @@ export default class index extends React.Component {
 				<Grid>
 					<Row>
 						{items.map((item, idx) =>{
-							return <div className="col s6">
+							return <Col xs={12} md={6}>
 								<Item key={idx} item={item}/>
-							</div>})}
-						{/*<div className="col s3">
-							{items.map((item, idx) =>{
-								if (idx%2 === 0) 
-									return <div className="col s3">
-								<Item key={idx} item={item}/>
-							</div>})}
-							
-						</div>
-						<div className="col s3">
-							
-						</div>
-						<div className="col s3">
-							{items.map((item, idx) =>{
-								if (idx%2 === 1) 
-									return <div className="col s3">
-								<Item key={idx} item={item}/>
-							</div>})}
-						</div>*/}
+							</Col>})}
 					</Row>
 				</Grid>
 			</div>
